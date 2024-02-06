@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -70,9 +72,9 @@
                     </li>
                   </ul>
                 </li>
-                <li class="active"><a href="events.html">Events</a></li>
+                <li><a href="events.html">Events</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li class="active"><a href="contact.html">Contact</a></li>
               </ul>
 
               <a href="#" class="site-menu-toggle js-menu-toggle text-black d-inline-block d-lg-none"><span class="icon-menu h3"></span></a>
@@ -88,8 +90,8 @@
         <div class="col-lg-12">
           <div class="hero-wrap text-center" style="background-image: url('images/hero_2.jpg');" data-stellar-background-ratio="0.5">
             <div class="hero-contents">
-              <h2>Events</h2>
-              <p><a href="index.html">Home</a> <span class="mx-2">/</span> <strong>Events</strong></p>
+              <h2>Get In Touch</h2>
+              <p><a href="index.html">Home</a> <span class="mx-2">/</span> <strong>Contact</strong></p>
             </div>
           </div>
         </div>
@@ -97,132 +99,72 @@
     </div>
 
     <div class="site-section">
-      <div class="container">
-       
-
-        <div class="row mb-5">
-          <div class="col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-5">
-            <div class="custom-media d-block">
-              <div class="img-wrap mb-3">
-                <a href="#"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div>
-                <span class="caption">May 19, 2020</span>
-                <h3><a href="#">Roman Greg scorer 4 goals</a></h3>
-                <p class="mb-0"><a href="#" class="more"><span class="mr-2">+</span>Learn More</a></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-5">
-            <div class="custom-media d-block">
-              <div class="img-wrap mb-3">
-                <a href="#"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div>
-                <span class="caption">May 19, 2020</span>
-                <h3><a href="#">Line for the upcoming match</a></h3>
-                <p class="mb-0"><a href="#" class="more"><span class="mr-2">+</span>Learn More</a></p>
+    <div class="container">
+      <div class="row">
+  
+        <div class="col-md-12 col-lg-7 mb-5">
+  
+  
+  
+          <form action="#" class="contact-form">
+  
+            <div class="row form-group">
+              <div class="col-md-12 mb-3 mb-md-0">
+                <label class="font-weight-bold" for="fullname">Full Name</label>
+                <input type="text" id="fullname" class="form-control" placeholder="Full Name">
               </div>
             </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-5">
-            <div class="custom-media d-block">
-              <div class="img-wrap mb-3">
-                <a href="#"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div>
-                <span class="caption">May 19, 2020</span>
-                <h3><a href="#">Roman Greg scorer 4 goals</a></h3>
-                <p class="mb-0"><a href="#" class="more"><span class="mr-2">+</span>Learn More</a></p>
+            <div class="row form-group">
+              <div class="col-md-12">
+                <label class="font-weight-bold" for="email">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="Email Address">
               </div>
             </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-5">
-            <div class="custom-media d-block">
-              <div class="img-wrap mb-3">
-                <a href="#"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div>
-                <span class="caption">May 19, 2020</span>
-                <h3><a href="#">Roman Greg scorer 4 goals</a></h3>
-                <p class="mb-0"><a href="#" class="more"><span class="mr-2">+</span>Learn More</a></p>
+            <div class="row form-group">
+              <div class="col-md-12">
+                <label class="font-weight-bold" for="email">Subject</label>
+                <input type="text" id="subject" class="form-control" placeholder="Enter Subject">
               </div>
             </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-5">
-            <div class="custom-media d-block">
-              <div class="img-wrap mb-3">
-                <a href="#"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div>
-                <span class="caption">May 19, 2020</span>
-                <h3><a href="#">Roman Greg scorer 4 goals</a></h3>
-                <p class="mb-0"><a href="#" class="more"><span class="mr-2">+</span>Learn More</a></p>
+  
+  
+            <div class="row form-group">
+              <div class="col-md-12">
+                <label class="font-weight-bold" for="message">Message</label>
+                <textarea name="message" id="message" cols="30" rows="5" class="form-control"
+                  placeholder="Say hello to us"></textarea>
               </div>
             </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-5">
-            <div class="custom-media d-block">
-              <div class="img-wrap mb-3">
-                <a href="#"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div>
-                <span class="caption">May 19, 2020</span>
-                <h3><a href="#">Line for the upcoming match</a></h3>
-                <p class="mb-0"><a href="#" class="more"><span class="mr-2">+</span>Learn More</a></p>
+  
+            <div class="row form-group">
+              <div class="col-md-12">
+                <input type="submit" value="Send Message" class="btn btn-primary py-2 px-4">
               </div>
             </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-5">
-            <div class="custom-media d-block">
-              <div class="img-wrap mb-3">
-                <a href="#"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div>
-                <span class="caption">May 19, 2020</span>
-                <h3><a href="#">Roman Greg scorer 4 goals</a></h3>
-                <p class="mb-0"><a href="#" class="more"><span class="mr-2">+</span>Learn More</a></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-5">
-            <div class="custom-media d-block">
-              <div class="img-wrap mb-3">
-                <a href="#"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
-              </div>
-              <div>
-                <span class="caption">May 19, 2020</span>
-                <h3><a href="#">Roman Greg scorer 4 goals</a></h3>
-                <p class="mb-0"><a href="#" class="more"><span class="mr-2">+</span>Learn More</a></p>
-              </div>
-            </div>
-          </div>
-
-
+  
+  
+          </form>
         </div>
-
-        <div class="row justify-content-center">
-          <div class="col-lg-7">
-            <div class="custom-pagination">
-              <a href="#">1</a>
-              <span>2</span>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">5</a>
-            </div>
+  
+        <div class="col-lg-4 ml-auto">
+          <div class="p-4 mb-3 bg-white">
+            <h3 class="h5 text-black mb-3">Contact Info</h3>
+            <p class="mb-0 font-weight-bold text-black">Address</p>
+            <p class="mb-4 text-black">203 Fake St. Mountain View, San Francisco, California, USA</p>
+  
+            <p class="mb-0 font-weight-bold text-black">Phone</p>
+            <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+  
+            <p class="mb-0 font-weight-bold text-black">Email Address</p>
+            <p class="mb-0"><a href="#">youremail@domain.com</a></p>
+  
           </div>
+  
+          
         </div>
-
-        
       </div>
     </div>
+  </div>
 
 
     <div class="footer">

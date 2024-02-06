@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -52,7 +54,7 @@
                 <li>
                   <a href="index.html">Home</a>
                 </li>
-                <li class="active"><a href="gallery.html">Gallery</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
                 <li class="has-children">
                   <a href="players.html">Players</a>
                   <ul class="dropdown arrow-top">
@@ -70,7 +72,7 @@
                     </li>
                   </ul>
                 </li>
-                <li><a href="events.html">Events</a></li>
+                <li class="active"><a href="events.html">Events</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
               </ul>
@@ -88,52 +90,142 @@
         <div class="col-lg-12">
           <div class="hero-wrap text-center" style="background-image: url('images/hero_2.jpg');" data-stellar-background-ratio="0.5">
             <div class="hero-contents">
-              <h2>Gallery</h2>
-              <p><a href="index.html">Home</a> <span class="mx-2">/</span> <strong>Gallery</strong></p>
+              <h2>Events</h2>
+              <p><a href="index.html">Home</a> <span class="mx-2">/</span> <strong>Events</strong></p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    
     <div class="site-section">
       <div class="container">
-        <div class="row align-items-center mb-2">
-          <div class="col-6">
-            <h2 class="section-title">Team Gallery</h2>
+       
+
+        <div class="row mb-5">
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-5">
+            <div class="custom-media d-block">
+              <div class="img-wrap mb-3">
+                <a href="#"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
+              </div>
+              <div>
+                <span class="caption">May 19, 2020</span>
+                <h3><a href="#">Roman Greg scorer 4 goals</a></h3>
+                <p class="mb-0"><a href="#" class="more"><span class="mr-2">+</span>Learn More</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-5">
+            <div class="custom-media d-block">
+              <div class="img-wrap mb-3">
+                <a href="#"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
+              </div>
+              <div>
+                <span class="caption">May 19, 2020</span>
+                <h3><a href="#">Line for the upcoming match</a></h3>
+                <p class="mb-0"><a href="#" class="more"><span class="mr-2">+</span>Learn More</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-5">
+            <div class="custom-media d-block">
+              <div class="img-wrap mb-3">
+                <a href="#"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
+              </div>
+              <div>
+                <span class="caption">May 19, 2020</span>
+                <h3><a href="#">Roman Greg scorer 4 goals</a></h3>
+                <p class="mb-0"><a href="#" class="more"><span class="mr-2">+</span>Learn More</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-5">
+            <div class="custom-media d-block">
+              <div class="img-wrap mb-3">
+                <a href="#"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
+              </div>
+              <div>
+                <span class="caption">May 19, 2020</span>
+                <h3><a href="#">Roman Greg scorer 4 goals</a></h3>
+                <p class="mb-0"><a href="#" class="more"><span class="mr-2">+</span>Learn More</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-5">
+            <div class="custom-media d-block">
+              <div class="img-wrap mb-3">
+                <a href="#"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
+              </div>
+              <div>
+                <span class="caption">May 19, 2020</span>
+                <h3><a href="#">Roman Greg scorer 4 goals</a></h3>
+                <p class="mb-0"><a href="#" class="more"><span class="mr-2">+</span>Learn More</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-5">
+            <div class="custom-media d-block">
+              <div class="img-wrap mb-3">
+                <a href="#"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
+              </div>
+              <div>
+                <span class="caption">May 19, 2020</span>
+                <h3><a href="#">Line for the upcoming match</a></h3>
+                <p class="mb-0"><a href="#" class="more"><span class="mr-2">+</span>Learn More</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-5">
+            <div class="custom-media d-block">
+              <div class="img-wrap mb-3">
+                <a href="#"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
+              </div>
+              <div>
+                <span class="caption">May 19, 2020</span>
+                <h3><a href="#">Roman Greg scorer 4 goals</a></h3>
+                <p class="mb-0"><a href="#" class="more"><span class="mr-2">+</span>Learn More</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-md-4 col-lg-3 mb-5 mb-lg-5">
+            <div class="custom-media d-block">
+              <div class="img-wrap mb-3">
+                <a href="#"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
+              </div>
+              <div>
+                <span class="caption">May 19, 2020</span>
+                <h3><a href="#">Roman Greg scorer 4 goals</a></h3>
+                <p class="mb-0"><a href="#" class="more"><span class="mr-2">+</span>Learn More</a></p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-7">
+            <div class="custom-pagination">
+              <a href="#">1</a>
+              <span>2</span>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              <a href="#">5</a>
+            </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <a href="images/img_1.jpg" data-fancybox="gal"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
-          </div>
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <a href="images/img_2.jpg" data-fancybox="gal"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
-          </div>
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <a href="images/img_3.jpg" data-fancybox="gal"><img src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
-          </div>
-
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <a href="images/img_4.jpg" data-fancybox="gal"><img src="images/img_4.jpg" alt="Image" class="img-fluid"></a>
-          </div>
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <a href="images/img_5.jpg" data-fancybox="gal"><img src="images/img_5.jpg" alt="Image" class="img-fluid"></a>
-          </div>
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <a href="images/img_1.jpg" data-fancybox="gal"><img src="images/img_1.jpg" alt="Image" class="img-fluid"></a>
-          </div>
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <a href="images/img_2.jpg" data-fancybox="gal"><img src="images/img_2.jpg" alt="Image" class="img-fluid"></a>
-          </div>
-          <div class="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <a href="images/img_3.jpg" data-fancybox="gal"><img src="images/img_3.jpg" alt="Image" class="img-fluid"></a>
-          </div>
-        </div>
+        
       </div>
     </div>
+
 
     <div class="footer">
       <div class="container">

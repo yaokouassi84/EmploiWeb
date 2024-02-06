@@ -84,4 +84,24 @@
     <servlet-name>FormModification</servlet-name>
     <url-pattern>/form_Modif</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EnregistrerImage</display-name>
+    <servlet-name>EnregistrerImage</servlet-name>
+    <servlet-class>fr.emploi.controleur.EnregistrerImage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EnregistrerImage</servlet-name>
+    <url-pattern>/enregistrerImage</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Form_Jsp</display-name>
+    <servlet-name>Form_Jsp</servlet-name>
+    <servlet-class>fr.emploi.nav.Form_Jsp</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Form_Jsp</servlet-name>
+    <url-pattern>/form_Photos</url-pattern>
+  </servlet-mapping>
 </web-app>

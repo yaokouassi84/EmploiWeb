@@ -51,7 +51,7 @@ var arcOffset = -pi / 2;
 var animTime = 200;
 var loaderTime = 1800;
 
-var CircleAudioPlayer = function (options) {
+var CircleAudioPlayer = function(options) {
 	options = options || {};
 	for (var property in DEFAULTS) {
 		this[property] = options[property] || DEFAULTS[property];
@@ -60,7 +60,7 @@ var CircleAudioPlayer = function (options) {
 	// create some things we need
 	this._canvas = document.createElement('canvas');
 	this._canvas.setAttribute('class', this.className + ' is-loading');
-	this._canvas.addEventListener('mousedown', (function () {
+	this._canvas.addEventListener('mousedown', (function() {
 		if (this.playing) {
 			this.pause();
 		}
@@ -75,7 +75,7 @@ var CircleAudioPlayer = function (options) {
 	this.setSize(this.size);
 
 	// redraw loop
-	(function cAPAnimationLoop (now) {
+	(function cAPAnimationLoop(now) {
 		// check if we need to update anything
 		if (this.animating) {
 			this._updateAnimations(now);
@@ -90,7 +90,7 @@ var CircleAudioPlayer = function (options) {
 };
 CircleAudioPlayer.prototype = {
 	// private methods
-	_animateIcon: function (to, from) {
+	_animateIcon: function(to, from) {
 		// define a few things the first time
 		this._animationProps = {
 			animStart: null,
@@ -105,7 +105,7 @@ CircleAudioPlayer.prototype = {
 			this.draw();
 		}
 	},
-	_updateAnimations: function (now) {
+	_updateAnimations: function(now) {
 		this._animationProps.animStart = this._animationProps.animStart || now;
 		var deltaTime = now - this._animationProps.animStart;
 		var perc = (1 - Math.cos(deltaTime / animTime * pi / 2));
@@ -130,7 +130,7 @@ CircleAudioPlayer.prototype = {
 			this._animationProps.current = current;
 		}
 	},
-	_draw: function (progress) {
+	_draw: function(progress) {
 		// common settings
 		if (isNaN(progress)) {
 			progress = this.audio.currentTime / this.audio.duration || 0;
@@ -189,7 +189,7 @@ CircleAudioPlayer.prototype = {
 			this._ctx.stroke();
 		}
 	},
-	_setState: function (state) {
+	_setState: function(state) {
 		this.playing = false;
 		this.loading = false;
 		if (state === 'playing') {
@@ -210,10 +210,10 @@ CircleAudioPlayer.prototype = {
 		this.draw();
 	},
 	// public methods
-	draw: function () {
+	draw: function() {
 		this._forceDraw = true;
 	},
-	setSize: function (size) {
+	setSize: function(size) {
 		this.size = size;
 		this._halfSize = size / 2; // we do this a lot. it's not heavy, but why repeat?
 		this._canvas.width = size;
@@ -266,17 +266,17 @@ CircleAudioPlayer.prototype = {
 			this.draw();
 		}
 	},
-	setAudio: function (audioUrl) {
+	setAudio: function(audioUrl) {
 		this.audio = new Audio(audioUrl);
 		this._setState('loading');
 
-		this.audio.addEventListener('canplaythrough', (function () {
+		this.audio.addEventListener('canplaythrough', (function() {
 			this._setState('paused');
 		}).bind(this));
-		this.audio.addEventListener('play', (function () {
+		this.audio.addEventListener('play', (function() {
 			this._setState('playing');
 		}).bind(this));
-		this.audio.addEventListener('pause', (function () {
+		this.audio.addEventListener('pause', (function() {
 			// reset when finished
 			if (this.audio.currentTime === this.audio.duration) {
 				this.audio.currentTime = 0;
@@ -284,13 +284,13 @@ CircleAudioPlayer.prototype = {
 			this._setState('paused');
 		}).bind(this));
 	},
-	appendTo: function (element) {
+	appendTo: function(element) {
 		element.appendChild(this._canvas);
 	},
-	play: function () {
+	play: function() {
 		this.audio.play();
 	},
-	pause: function () {
+	pause: function() {
 		this.audio.pause();
 	}
 };
@@ -299,7 +299,7 @@ CircleAudioPlayer.prototype = {
 // now init one as an example
 var cap = new CircleAudioPlayer({
 	audio: 'http://www.largesound.com/ashborytour/sound/AshboryBYU.mp3',
-  size: 120,
-  borderWidth: 4
+	size: 120,
+	borderWidth: 4
 });
 cap.appendTo(playerContainer);

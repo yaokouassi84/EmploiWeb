@@ -8,9 +8,10 @@
 	// position: absolute;
 	position: relative;
 	z-index: 99;
-	
+
 	.site-logo {
 		font-weight: 200;
+
 		a {
 			font-weight: 200;
 			font-size: 25px;
@@ -20,46 +21,56 @@
 	}
 
 	.site-navigation {
-		
+
 		.site-menu {
-			
+
 			margin-bottom: 0;
 			margin-left: 0;
 			padding-left: 0;
+
 			.active {
-				> a {
+				>a {
 					color: $black;
 				}
 			}
+
 			a {
-				text-decoration: none!important;
+				text-decoration: none !important;
 				// font-size: 15px;
 				display: inline-block;
 			}
-			> li {
+
+			>li {
 				display: inline-block;
 				padding: 10px 5px;
-				> a {
+
+				>a {
 					padding: 10px 10px;
 					letter-spacing: .05em;
 					color: rgba($black, .6);
-					text-decoration: none!important;
+					text-decoration: none !important;
+
 					&:hover {
 						color: $primary;
 					}
 				}
+
 				&:last-child {
 					padding-right: 0;
-					> a {
+
+					>a {
 						padding-right: 0;
 					}
 				}
 			}
+
 			.has-children {
 				position: relative;
-				> a {
+
+				>a {
 					position: relative;
-					padding-right: 20px;						
+					padding-right: 20px;
+
 					&:before {
 						position: absolute;
 						content: "\e313";
@@ -70,21 +81,23 @@
 						font-family: 'icomoon';
 					}
 				}
+
 				.dropdown {
 					visibility: hidden;
 					opacity: 0;
 					top: 100%;
 					position: absolute;
 					text-align: left;
-					box-shadow: 0 2px 10px -2px rgba(0,0,0,.25);
+					box-shadow: 0 2px 10px -2px rgba(0, 0, 0, .25);
 					padding: 10px 0;
 					margin-top: 20px;
 					margin-left: 0px;
 					background: $white;
 					transition: 0.2s 0s;
-				
+
 					&.arrow-top {
 						position: absolute;
+
 						&:before {
 							bottom: 100%;
 							left: 20%;
@@ -95,71 +108,88 @@
 							position: absolute;
 							pointer-events: none;
 						}
+
 						&:before {
 							border-color: rgba(136, 183, 213, 0);
 							border-bottom-color: $white;
 							border-width: 10px;
 							margin-left: -10px;
-						}	
+						}
 					}
+
 					a {
 						text-transform: none;
 						letter-spacing: normal;
 						transition: 0s all;
 						color: $black;
 					}
+
 					.active {
-						> a {
+						>a {
 							color: $primary;
 						}
 					}
-					> li {
+
+					>li {
 						list-style: none;
 						padding: 0;
 						margin: 0;
 						min-width: 200px;
-						> a {
+
+						>a {
 							padding: 5px 20px;
 							display: block;
+
 							&:hover {
 								color: $primary;
 							}
 						}
 
 						&.has-children {
-							> a {
+							>a {
 								&:before {
 									content: "\e315";
 									right: 20px;
 								}
 							}
-							> .dropdown, > ul {
+
+							>.dropdown,
+							>ul {
 								left: 100%;
 								top: 0;
 							}
-							&:hover, &:active, &:focus {
-								> a {
+
+							&:hover,
+							&:active,
+							&:focus {
+								>a {
 									color: $primary;
 								}
 							}
 						}
 					}
 				}
-				
-				&:hover, &:focus, &:active {
-					> a {
+
+				&:hover,
+				&:focus,
+				&:active {
+					>a {
 						color: $primary;
 					}
 				}
-				&:hover, &:focus, &:active {
+
+				&:hover,
+				&:focus,
+				&:active {
 					cursor: pointer;
-					> .dropdown {
+
+					>.dropdown {
 						transition-delay: 0s;
 						margin-top: 0px;
 						visibility: visible;
 						opacity: 1;
 
-				
+
 					}
 				}
 			}
@@ -178,9 +208,9 @@
 	padding-top: 20px;
 	background: $white;
 	height: calc(100vh);
-	
+
 	transform: translateX(110%);
-	box-shadow: -10px 0 20px -10px rgba(0,0,0,.1);
+	box-shadow: -10px 0 20px -10px rgba(0, 0, 0, .1);
 	transition: .3s all ease-in-out;
 
 	.offcanvas-menu & {
@@ -192,10 +222,11 @@
 		float: left;
 		padding-left: 20px;
 		padding-right: 20px;
-		
+
 		.site-mobile-menu-close {
 			float: right;
 			margin-top: 8px;
+
 			span {
 				font-size: 30px;
 				display: inline-block;
@@ -204,21 +235,26 @@
 				line-height: 1;
 				cursor: pointer;
 				transition: .3s all ease;
+
 				&:hover {
 					color: $black;
 				}
 			}
 		}
+
 		.site-mobile-menu-logo {
 			float: left;
 			margin-top: 10px;
 			margin-left: 0px;
+
 			a {
 				display: inline-block;
 				text-transform: uppercase;
+
 				img {
 					max-width: 70px;
 				}
+
 				&:hover {
 					text-decoration: none;
 				}
@@ -229,7 +265,7 @@
 	.site-mobile-menu-body {
 		// height: 400px;
 		overflow-y: scroll;
-  	-webkit-overflow-scrolling: touch;
+		-webkit-overflow-scrolling: touch;
 		position: relative;
 		padding: 20px;
 
@@ -237,6 +273,7 @@
 		padding-bottom: 150px;
 
 	}
+
 	.site-nav-wrap {
 		padding: 0;
 		margin: 0;
@@ -252,19 +289,23 @@
 			display: block;
 			position: relative;
 			color: $black;
+
 			&:hover {
 				color: $primary;
 			}
 		}
+
 		li {
 			position: relative;
 			display: block;
+
 			&.active {
-				> a {
+				>a {
 					color: $white;
 				}
 			}
 		}
+
 		.arrow-collapse {
 			position: absolute;
 			right: 0px;
@@ -275,9 +316,11 @@
 			text-align: center;
 			cursor: pointer;
 			border-radius: 50%;
+
 			&:hover {
 				background: $gray-100;
 			}
+
 			&:before {
 				font-size: 12px;
 				z-index: 20;
@@ -289,46 +332,54 @@
 				transform: translate(-50%, -50%) rotate(-180deg);
 				transition: .3s all ease;
 			}
+
 			&.collapsed {
 				&:before {
-					transform: translate(-50%, -50%);	
+					transform: translate(-50%, -50%);
 				}
 			}
 		}
-		> li {
+
+		>li {
 			display: block;
 			position: relative;
 			float: left;
 			width: 100%;
-			
-			> a {
+
+			>a {
 				padding-left: 20px;
 				font-size: 20px;
 			}
-			> ul {
+
+			>ul {
 				padding: 0;
 				margin: 0;
 				list-style: none;
-				> li {
+
+				>li {
 					display: block;
-					> a {
+
+					>a {
 						padding-left: 40px;
 						font-size: 16px;
 					}
-					> ul {
+
+					>ul {
 						padding: 0;
 						margin: 0;
-						> li {
+
+						>li {
 							display: block;
-							> a {
+
+							>a {
 								font-size: 16px;
-								padding-left: 60px;			
+								padding-left: 60px;
 							}
 						}
 					}
 				}
 			}
 		}
-		
+
 	}
 }
