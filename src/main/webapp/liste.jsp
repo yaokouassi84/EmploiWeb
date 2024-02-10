@@ -81,5 +81,9 @@
 			</c:forEach>
 		</tbody>
 	</table>
+	<div>
+			<p><a href='<c:url value="/camembert" />'>Voir Graphique Camembert</a></p>
+			<p><a href='<c:url value="/baton" />'>Voir Bâton</a>
+	</div>
 </body>
 </html>

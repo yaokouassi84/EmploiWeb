@@ -114,14 +114,4 @@
     <servlet-name>AddPays</servlet-name>
     <url-pattern>/addPays</url-pattern>
   </servlet-mapping>
-  <!-- <servlet>
-    <description></description>
-    <display-name>GenererPdf</display-name>
-    <servlet-name>GenererPdf</servlet-name>
-    <servlet-class>fr.emploi.controleur.GenererPdf</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>GenererPdf</servlet-name>
-    <url-pattern>/pdf1</url-pattern>
-  </servlet-mapping> -->
 </web-app>
