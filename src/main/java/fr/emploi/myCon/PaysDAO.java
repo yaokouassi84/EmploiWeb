@@ -4,11 +4,13 @@ import java.awt.Color;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +27,8 @@ public class PaysDAO {
 	private static final String USER = "root";
 	private static final String PASSWORD = "";
 
+	
+	
 	public static boolean addPays(Pays pays) {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -119,6 +123,38 @@ public class PaysDAO {
 		return pays;
 	}
 
+	// Méthode pour créer la table "Pays"
+	public static void createPaysTable() {
+		// Obtenir la connexion à la base de données
+		Connection connection = Connexion.obtenirConnexion();
+
+		// Requête SQL pour créer la table "Pays"
+		String createTableSQL = "CREATE TABLE Pays if not exists(" + "id INT AUTO_INCREMENT PRIMARY KEY,"
+				+ "nomPays VARCHAR(255) NOT NULL," + "continent VARCHAR(225)" + "population BIGINT"+"codeIndicatif int"+"langue"+")";
+
+		// Utilisation d'un objet Statement pour exécuter la requête
+		try (Statement statement = connection.createStatement()) {
+			// Exécution de la requête SQL
+			if(createTableSQL == null) {
+				
+				statement.executeUpdate(createTableSQL);
+				System.out.println("La table 'Pays' a été créée avec succès !");
+				
+			}
+			else{
+				System.out.println("La table 'Pays' est déja créée avec succès !");
+			}
+			
+		} catch (SQLException e) {
+			// Gestion des exceptions en cas d'erreur lors de l'exécution de la requête
+			e.printStackTrace();
+			System.out.println("Erreur lors de la création de la table 'Pays'.");
+		} finally {
+			// Fermeture de la connexion
+			Connexion.fermerConnexion(connection);
+		}
+	}
+    
 	// Méthode pour mettre à jour les informations d'un pays dans la base de données
 	public static boolean updatePays(Pays pays) {
 		// Initialisation de la connexion à la base de données
@@ -461,4 +497,107 @@ public class PaysDAO {
 		contentStream.showText(text);
 		contentStream.endText();
 	}
+	
+	
+	public static List<Object[]> getPaysPopulation() {
+        List<Object[]> paysPopulationList = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        try {
+            conn = DriverManager.getConnection(URL, USER, PASSWORD);
+            String query = "SELECT nomPays, population FROM pays";
+            pstmt = conn.prepareStatement(query);
+            rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                String nomPays = rs.getString("nomPays");
+                BigDecimal population = rs.getBigDecimal("population");
+                Object[] paysPopulation = {nomPays, population};
+                paysPopulationList.add(paysPopulation);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            // Fermer les ressources
+            if (rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (pstmt != null) {
+                try {
+                    pstmt.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        return paysPopulationList;
+    }
+	
+	// Méthode pour extraire tous les pays de la base de données
+    public static List<Pays> getAllPaysJasper() {
+        List<Pays> paysList = new ArrayList<>();
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+
+        try {
+            conn = DriverManager.getConnection(URL, USER, PASSWORD);
+            String query = "SELECT * FROM pays";
+            pstmt = conn.prepareStatement(query);
+            rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                Pays pays = new Pays();
+                pays.setId(rs.getInt("id"));
+                pays.setNomPays(rs.getString("nomPays"));
+                pays.setContinent(rs.getString("continent"));
+                pays.setPopulation(rs.getBigDecimal("population"));
+                pays.setCodeIndicatif(rs.getInt("codeIndicatif"));
+                pays.setLangue(rs.getString("langue"));
+                paysList.add(pays);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // Gérer les erreurs de connexion ou d'exécution de la requête
+        } finally {
+            // Fermer les ressources
+            if (rs != null) {
+                try {
+                    rs.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (pstmt != null) {
+                try {
+                    pstmt.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        return paysList;
+    }
 }

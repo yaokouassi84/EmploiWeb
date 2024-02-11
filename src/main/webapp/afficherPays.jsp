@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,5 +33,6 @@
 			readonly><br> <label for="langue">Langue:</label> <input
 			type="text" id="langue" name="langue" value="${pays.langue}" readonly><br>
 	</form>
+	
 </body>
 </html>
