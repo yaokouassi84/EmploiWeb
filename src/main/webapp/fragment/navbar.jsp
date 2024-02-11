@@ -14,7 +14,7 @@
                 <li class="active">
                   <a href='<c:url value="/accueil"/>'>Accueil</a>
                 </li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href='<c:url value="/gallery"/>'>Galleries</a></li>
                 <li class="has-children">
                   <a href="players.html">Players</a>
                   <ul class="dropdown arrow-top">
